@@ -1,0 +1,8 @@
+version: "3"
+services:
+
+  datastore:
+    image: google/cloud-sdk:178.0.0
+    command: gcloud beta emulators datastore start --consistency 1.0 --project test --host-port 0.0.0.0:8438
+    ports:
+     - "8438:8438"
